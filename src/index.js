@@ -24,8 +24,9 @@ function FunctionComponent({name}) {
   const [state, setstate] = useState(0);
   return <div className="border">
     {name}
-    <button onClick={() => {setstate(state + 1); setstate(state + 2);}}>{state}:click add</button>
+    <button onClick={() => {setstate(state + 1)}}>{state}:click add</button>
     <button onClick={()=> console.log('click btn')}>btn</button>
+    {state % 2 ? (<button>btnsssss</button>) : (<div>omg</div>)}
     </div>
 }
 
